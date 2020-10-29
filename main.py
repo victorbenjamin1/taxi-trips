@@ -5,7 +5,7 @@ from queries import *
 import matplotlib.pyplot as plt
 
 sc = SparkContext('local')
-spark = SparkSession.config("spark.executor.memory", "70g").config("spark.driver.memory", "50g").config("spark.memory.offHeap.size","16g").sc()
+spark = SparkSession(sc).conf("spark.executor.memory", "70g")
 
 # Carregando Dataset: Taxi Trips
 
