@@ -13,6 +13,7 @@ spark = SparkSession(sc)
 print('\nCarregando Dataset: Taxi Trips')
 
 path = "files/datasets/data-sample_data-n*"
+path = "https://s3.console.aws.amazon.com/s3/object/ravya-datasprints/trips/*"
 Trips = spark.read.json(path)
 Trips.createOrReplaceTempView("trips")
 
