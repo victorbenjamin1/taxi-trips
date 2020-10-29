@@ -5,7 +5,13 @@ from queries import *
 import matplotlib.pyplot as plt
 
 sc = SparkContext('local')
-spark = SparkSession(sc).conf("spark.executor.memory", "70g")
+# spark = SparkSession(sc).conf("spark.executor.memory", "70g")
+
+spark = SparkSession.builder \
+        .master("local") \
+        .appName("Word Count") \
+        .config("spark.some.config.option", "some-value") \
+        .getOrCreate(sc)
 
 # Carregando Dataset: Taxi Trips
 
