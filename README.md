@@ -28,7 +28,9 @@ No arquivo **queries.py** disponível na raiz do projeto estão todas as queries
 
 ## Para reproduzir as análises a partir de um ambiente pronto em nuvem:
 
-1. Faça o download do arquivo com extensão **.pem** disponibilizado pelo dono do projeto. [AJUSTAR] Mandar zipado com senha
+0. Faça o download do arquivo victorbenjamin-pem.zip disponível na raiz do projeto.
+
+1. Extraia o arquivo **.pem** utilizando a chave fornecida pelo dono do projeto (enviada por e-mail)
 
 2. Garanta que a chave tenha a permissão adequada:
 
