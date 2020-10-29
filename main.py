@@ -72,8 +72,6 @@ print(f'CSV com os dados da série temporal: /link/ \n'
 
 print("\n#########################################\n")
 
-sc = SparkContext.getOrCreate('local')
-
 print('\n5. Bonûs - Qual o tempo médio das corridas nos dias de sábado e domingo;\n')
 
 TripsWeekend = spark.sql(query_question5)
@@ -83,15 +81,17 @@ del trips_weekend['inicio_corrida']
 trips_weekend['fim_corrida_Date'] = trips_weekend['fim_corrida'].astype('datetime64')
 del trips_weekend['fim_corrida']
 
-elaptime = []
+# elaptime = []
 
-for i, row in trips_weekend.iterrows():
-    elapsedTime = row['fim_corrida_Date'] - row['inicio_corrida_Date']
-    elapsedTime = elapsedTime.total_seconds()
-    elaptime.append(elapsedTime)
+trips_weekend['elaptime'] = trips_weekend['fim_corrida_Date'] - trips_weekend['inicio_corrida_Date']
 
-trips_weekend['elapsedTime'] = elaptime
+# for i, row in trips_weekend.iterrows():
+#    elapsedTime = row['fim_corrida_Date'] - row['inicio_corrida_Date']
+#    elapsedTime = elapsedTime.total_seconds()
+#    elaptime.append(elapsedTime)
+
+# trips_weekend['elapsedTime'] = elaptime
 trips_weekend.to_csv('files/results/trips_weekend-question5.csv', index=False)
 mean_time = trips_weekend['elapsedTime'].mean()
-print(f'O tempo médio das corridas no final de semana é de: {round(mean_time)} segundos\n'
+print(f'O tempo médio das corridas no final de semana é de: {mean_time}\n'
       f'CSV o tempo médio de cada corrida: /link/ \n')
