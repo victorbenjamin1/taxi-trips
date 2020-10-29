@@ -9,8 +9,11 @@ sc = SparkContext('local')
 
 spark = SparkSession.builder \
         .master("local") \
-        .appName("Word Count") \
+        .appName("Taxi Trip") \
         .config("spark.some.config.option", "some-value") \
+        .config("spark.executor.memory", "70g") \
+        .config("spark.driver.memory", "50g") \
+        .config("spark.memory.offHeap.size", "16g")  \
         .getOrCreate()
 
 # Carregando Dataset: Taxi Trips
@@ -40,7 +43,7 @@ Payments = spark.read.option("header", True).csv(payments_path)
 Payments.createOrReplaceTempView("payments")
 
 # Início da resolução das questões
-"""
+
 print('\n1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?')
 DistanciaMedia = spark.sql(query_question1)
 distancia_media = DistanciaMedia.toPandas()
@@ -48,7 +51,7 @@ resultado = distancia_media['avg_distance'][0]
 print(f'R: {resultado} milhas')
 
 print("\n#########################################\n")
-
+"""
 print('\n2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?\n')
 BiggerVendors = spark.sql(query_question2)
 totalamount_vendors = BiggerVendors.toPandas()
