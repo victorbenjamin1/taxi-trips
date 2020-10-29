@@ -2,7 +2,7 @@
 
 ## O que é?
 
-Esse projeto tem por objetivo realizar análises sobre um conjunto de dados a respeito de corridas de táxi realizadas em nova york entre os anos de 2009 e 2012, além de fornecer a infraestrutura necessária em cloud para reprodução do processamento.
+Esse projeto tem por objetivo realizar análises sobre um conjunto de dados a respeito de corridas de táxi realizadas em Nova York entre os anos de 2009 e 2012, além de fornecer a infraestrutura necessária em cloud para reprodução do processamento.
 
 ## Tecnologias utilizadas
 
