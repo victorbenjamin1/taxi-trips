@@ -28,7 +28,7 @@ No arquivo **queries.py** disponível na raiz do projeto todas as queries utiliz
 
 ## Para reproduzir as análises a partir de um ambiente público em nuvem:
 
-1. Faça o download do arquivo com extensão **.pem** disponível na raiz do projeto.
+1. Faça o download do arquivo com extensão **.pem** disponibilizado pelo dono do projeto.
 
 2. Garanta que ela tenha a permissão adequada:
 
