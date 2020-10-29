@@ -28,4 +28,4 @@
 
 `python download-files.py`
 
-> OBS: Se todos os arquivos já estiverem sincronizados nada vai acontecer.
+**OBS:** *Se todos os arquivos já estiverem sincronizados nada vai acontecer.*
