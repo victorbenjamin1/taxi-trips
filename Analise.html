@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Título</title>
+</head>
+<body>
+   <center><h1>Análise do dataset: taxi trips</h1>
+
+    <p> Após o processamento dos dados de um dataset com mais de 4 milhões <br>
+        de registros a respeito de corridas de taxi realizadas em Nova York <br>
+        algumas pontos puderam ser observados. Este documento tem o intuito <br>
+        de propor e responder à algumas questões referente a esses dados. <br>
+
+    </p>
+
+    <h2>Tópicos que serão respondidos na análise:</h2>
+
+    <i><p>1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?</p>
+    <p>2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?</p>
+    <p>3. Histograma da distribuição mensal, nos 4 anos, de corridas pagas em dinheiro.</p>
+    <p>4. Gráfico de série temporal contando a quantidade de gorjetas de cada dia, nos últimos 3 meses de 2012.</p>
+    <p>5. Qual o tempo médio das corridas nos dias de sábado e domingo?</p></i>
+
+    <hr>
+
+<h3>1. Qual a distância média percorrida por viagens com no máximo 2 passageiros? </h3>
+
+        <p>A distância média percorrida por viagens com no máximo 2 passageiros é de <b>2,66</b> milhas.</p><div class=""></div>
+        <p>Isso equivale a aproximadamente <b>4,2</b> quilômetros.</p>
+        <p><small> Cabe destacar que o dataset não apresenta nenhuma unidade de medida, foi suposto <i>milhas</i> <br>
+            por ser a unidade comumente usada no páis a que se refere o dataset. </small></p>
+
+            <br>
+            <br>
+
+<h3>2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?</h3>
+
+
+<p>Aqui, vendors são as empresas de Taxi que atuam em Nova York.</p>
+<p>Esse conjunto de dados tem dados de 4 diferentes empresas, segue abaixo o valor total <br>
+    arrecadado por cada uma das três maiores em todos os anos presentes no dataset (2009,2010,2011,2012):</p>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Empresa</th>
+            <th>Total arrecadado</th>
+        </tr>
+        <td><b>Creative Mobile Technologies, LLC</b> </td>
+        <td>$19.549.084,28</td>
+        <tr>
+        <td><b>VeriFone, Inc</b></td>
+        <td>$19.043.434,00</td>
+        </tr>
+        <tr>
+        <td><b>Dependable Driver Service, Inc</b></td>
+        <td>$2.714.901,72</td>
+        </tr>
+        </table>
+
+        <img src="https://ravya-datasprints.s3.amazonaws.com/results/barchart-question2.jpg"  title="Questao 2" width="900" height="600">
+
+
+<h3>3. Histograma da distribuição mensal, nos 4 anos, de corridas pagas em dinheiro.</h3>
+
+<p>Nesse gráfico vamos analisar a quantidade de corridas em cada um dos meses que são pagas em dinheiro.<br></p>
+<p>Nessa visão podemos enxergar padrões de sazonalidade, como por exemplo, a diminuição <br>
+drástica do número de corridas nesse perfil no mês de dezembro.</p>
+
+<p><small> Não temos os dados do mês de dezembro de 2011 e 2012. </small></p>
+
+
+<img src="https://ravya-datasprints.s3.amazonaws.com/results/histogram-question3.jpg"  title="Questao 2" width="1100" height="521">
+
+</center> 
+
+</body>
+</html>
