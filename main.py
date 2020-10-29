@@ -11,7 +11,7 @@ spark = SparkSession.builder \
         .master("local") \
         .appName("Word Count") \
         .config("spark.some.config.option", "some-value") \
-        .getOrCreate(sc)
+        .getOrCreate()
 
 # Carregando Dataset: Taxi Trips
 
