@@ -34,7 +34,7 @@ Payments = spark.read.option("header", True).csv(payments_path)
 Payments.createOrReplaceTempView("payments")
 
 # Início da resolução das questões
-
+"""
 print('\n1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?')
 DistanciaMedia = spark.sql(query_question1)
 distancia_media = DistanciaMedia.toPandas()
@@ -69,6 +69,7 @@ tips_amount2012 = tips_amount2012.sort_values(by=['dia_corrida'])
 tips_amount2012.to_csv('files/results/tipsamout-question4.csv', index=False)
 print(f'CSV com os dados da série temporal: /link/ \n'
       f'Série temporal: /link/')
+"""
 
 print("\n#########################################\n")
 
