@@ -4,6 +4,13 @@
 
 ## Tecnologias utilizadas
 
+- AWS EC2 (Linux)
+- AWS S3
+- AWS CLI
+- Python (pandas, pyspark, matplotlib) 
+- SQL
+
+
 ## Tópicos que respondidos com essa análise:
 
 1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?
@@ -17,7 +24,7 @@
 
 No arquivo **queries.py** disponível na raiz do projeto todas as queries utilizadas em cada questão, acompanhadas de uma breve descrição da linha de pensamento considerada.
 
-## Para reproduzir as análises a partir do ambiente em nuvem:
+## Para reproduzir as análises a partir de um ambiente público em nuvem:
 
 1. Faça o download do arquivo com extensão **.pem** disponível na raiz do projeto.
 
