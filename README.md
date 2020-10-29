@@ -58,3 +58,9 @@ Esse comando fará o download de todo o dataset.
 > Nesse momento os dados são processados e os resultados são imediatamente são apresentados no terminal.
 O resumo de todas as análises estão presentes do diretório **files/results**
 
+**OBS**:
+    
+    A questão de número 5 não consegue ser devidamente processada na 
+    máquina disponbilizada no ambiente em nuvem, devido sua pouca capacidade. 
+    Por isso o seu processamento foi pulado. Porém o código utilizado para 
+    resolução da questão segue disponível no arquivo main.py para avaliação.

@@ -132,7 +132,13 @@ tips_amount2012.to_csv('files/results/tipsamout-question4.csv', index=False)
 print(f'CSV com os dados da série temporal: {cwd}/files/results/tipsamout-question4.csv\n'
       f'Série temporal: {cwd}/files/results/series-question4.jpg')
 
+
+print('\nDone!')
+
+exit()
+
 print("\n#########################################\n")
+
 
 print('\n5. Bonûs - Qual o tempo médio das corridas nos dias de sábado e domingo;\n')
 
