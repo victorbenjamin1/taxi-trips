@@ -13,7 +13,7 @@ Esse projeto tem por objetivo realizar análises sobre datasets de corridas de t
 - SQL
 
 
-## Tópicos que respondidos com essa análise:
+## Tópicos que serão respondidos na análise:
 
 1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?
 2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?
