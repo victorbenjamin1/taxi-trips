@@ -5,16 +5,15 @@ from queries import *
 import matplotlib.pyplot as plt
 
 sc = SparkContext('local')
-# spark = SparkSession(sc).conf("spark.executor.memory", "70g")
 
 spark = SparkSession.builder \
-        .master("local") \
-        .appName("Taxi Trip") \
-        .config("spark.some.config.option", "some-value") \
-        .config("spark.executor.memory", "70g") \
-        .config("spark.driver.memory", "50g") \
-        .config("spark.memory.offHeap.size", "16g")  \
-        .getOrCreate()
+    .master("local") \
+    .appName("Taxi Trip") \
+    .config("spark.some.config.option", "some-value") \
+    .config("spark.executor.memory", "70g") \
+    .config("spark.driver.memory", "50g") \
+    .config("spark.memory.offHeap.size", "16g") \
+    .getOrCreate()
 
 # Carregando Dataset: Taxi Trips
 
@@ -51,7 +50,7 @@ resultado = distancia_media['avg_distance'][0]
 print(f'R: {resultado} milhas')
 
 print("\n#########################################\n")
-"""
+
 print('\n2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?\n')
 BiggerVendors = spark.sql(query_question2)
 totalamount_vendors = BiggerVendors.toPandas()
@@ -78,7 +77,6 @@ tips_amount2012 = tips_amount2012.sort_values(by=['dia_corrida'])
 tips_amount2012.to_csv('files/results/tipsamout-question4.csv', index=False)
 print(f'CSV com os dados da série temporal: /link/ \n'
       f'Série temporal: /link/')
-"""
 
 print("\n#########################################\n")
 
@@ -91,17 +89,24 @@ del trips_weekend['inicio_corrida']
 trips_weekend['fim_corrida_Date'] = trips_weekend['fim_corrida'].astype('datetime64')
 del trips_weekend['fim_corrida']
 
-# elaptime = []
+trips_weekend['elapsedTime'] = trips_weekend['fim_corrida_Date'] - trips_weekend['inicio_corrida_Date']
 
-trips_weekend['elaptime'] = trips_weekend['fim_corrida_Date'] - trips_weekend['inicio_corrida_Date']
-
-# for i, row in trips_weekend.iterrows():
-#    elapsedTime = row['fim_corrida_Date'] - row['inicio_corrida_Date']
-#    elapsedTime = elapsedTime.total_seconds()
-#    elaptime.append(elapsedTime)
-
-# trips_weekend['elapsedTime'] = elaptime
 trips_weekend.to_csv('files/results/trips_weekend-question5.csv', index=False)
 mean_time = trips_weekend['elapsedTime'].mean()
-print(f'O tempo médio das corridas no final de semana é de: {mean_time}\n'
+
+
+# formatando retorno tempo
+
+def strfdelta(tdelta, fmt):
+    d = {"days": tdelta.days}
+    d["hours"], rem = divmod(tdelta.seconds, 3600)
+    d["minutes"], d["seconds"] = divmod(rem, 60)
+    return fmt.format(**d)
+
+
+mean_time_format = strfdelta(mean_time, "{minutes} minutos e {seconds} segundos")
+
+print(f'O tempo médio das corridas no final de semana é de {mean_time_format}\n'
       f'CSV o tempo médio de cada corrida: /link/ \n')
+
+print('\nDone!')
