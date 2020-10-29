@@ -1,4 +1,10 @@
-# Explicacao
+#
+""" 1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?
+
+        Nessa query foi obtida a média do campo trip_distance que considero ser
+        a distância percorrida na viagem em milhas (considerando a unidade de medida
+        mais utilizada nos EUA), filtrando apenas viagens que possuem o campo
+        passenger_count (quantidade de passageiros) menor ou igual a 2. """
 
 query_question1 = """
             SELECT  ROUND(AVG(trip_distance),2) avg_distance
