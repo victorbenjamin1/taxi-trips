@@ -2,6 +2,8 @@
 
 ## O que é?
 
+Esse projeto tem por objetivo realizar análises sobre datasets de corridas de táxi realizadas em nova york entre os anos de 2009 e 2012, além de fornecer a infraestrutura necessária em cloud pública para repodrução das análises.
+
 ## Tecnologias utilizadas
 
 - AWS EC2 (Linux)
@@ -11,7 +13,7 @@
 - SQL
 
 
-## Tópicos que respondidos com essa análise:
+## Tópicos que serão respondidos na análise:
 
 1. Qual a distância média percorrida por viagens com no máximo 2 passageiros?
 2. Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado?
