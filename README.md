@@ -53,5 +53,6 @@ Esse comando fará o download de todo o dataset.
 
 `python3 main.py`
 
-Nesse momento os dados são processados e os resultados são imediatamente são apresentados no terminal em que o programa foi executado.
+> Nesse momento os dados são processados e os resultados são imediatamente são apresentados no terminal.
+O resumo de todas as análises estão presentes do diretório **files/results**
 
