@@ -2,6 +2,8 @@
 
 ## O que é?
 
+Esse projeto tem por objetivo realizar análises sobre datasets de corridas de táxi realizadas em nova york entre os anos de 2009 e 2012
+
 ## Tecnologias utilizadas
 
 - AWS EC2 (Linux)
