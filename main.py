@@ -39,7 +39,7 @@ print('\n1. Qual a distância média percorrida por viagens com no máximo 2 pas
 DistanciaMedia = spark.sql(query_question1)
 distancia_media = DistanciaMedia.toPandas()
 resultado = distancia_media['avg_distance'][0]
-print(f'R: A distância média percorrida com viagens de no máximo 2 dos passageiros é de {resultado} milhas')
+print(f'R: {resultado} milhas')
 
 print("\n#########################################\n")
 
@@ -71,6 +71,8 @@ print(f'CSV com os dados da série temporal: /link/ \n'
       f'Série temporal: /link/')
 
 print("\n#########################################\n")
+
+sc = SparkContext.getOrCreate('local')
 
 print('\n5. Bonûs - Qual o tempo médio das corridas nos dias de sábado e domingo;\n')
 
